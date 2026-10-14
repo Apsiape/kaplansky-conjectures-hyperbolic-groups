@@ -4,7 +4,7 @@ Nidhal Mghirbi and Seth Douglas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23374263.svg)](https://doi.org/10.5281/zenodo.23374263)
 
-Version 1.0.1 corrects the author order (Nidhal Mghirbi, Seth Douglas); the mathematics is unchanged from version 1.0.0 ([doi:10.5281/zenodo.23374264](https://doi.org/10.5281/zenodo.23374264)). All versions: [doi:10.5281/zenodo.23374263](https://doi.org/10.5281/zenodo.23374263).
+Version 1.0.1 ([doi:10.5281/zenodo.23374592](https://doi.org/10.5281/zenodo.23374592)) corrects the author order (Nidhal Mghirbi, Seth Douglas); the mathematics is unchanged from version 1.0.0 ([doi:10.5281/zenodo.23374264](https://doi.org/10.5281/zenodo.23374264)). All versions: [doi:10.5281/zenodo.23374263](https://doi.org/10.5281/zenodo.23374263).
 
 Do Kaplansky's group-ring conjectures hold for torsion-free word-hyperbolic groups? In positive characteristic,
 no. For every prime p there is a finitely presented, torsion-free, word-hyperbolic group G with a finite

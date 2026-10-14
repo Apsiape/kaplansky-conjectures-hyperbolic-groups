@@ -6,6 +6,9 @@ version: 1.0.1
 doi: 10.5281/zenodo.23374263
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23374592
+    description: "Version 1.0.1"
+  - type: doi
     value: 10.5281/zenodo.23374264
     description: "Version 1.0.0"
   - type: doi
