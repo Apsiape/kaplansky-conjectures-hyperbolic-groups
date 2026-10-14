@@ -1,0 +1,26 @@
+GF(81) modulus (low->high): [1, 0, 1, 1, 1]  field ok
+PG(2,81): v=6643, lines of size 82, point degree 82, line-line meets = 1, point-point joined by 1 line: ok
+involution: fixed-point-free, extras paired with distinct ordinary letters 0..4: ok
+A_+ per line class: 39858  counts: {(0, 1, 2): 82, (): 39038} (each 3-subset same)
+B   per line class: 79716  counts: {(0, 1, 2, 3, 4): 984, (): 78732}
+cross-intersection values (line-line in {1,82}, extras in {0,3}): [1, 4, 82, 85]  mod 3: [1]
+random direct |S_x cap S_y| values seen: [1, 4, 82, 85]  all = 1 mod 3: True
+joint matrices built
+letter frequency on A_+ equals 82/6643 for every letter: True
+letter frequency on B equals 82/6643 for every letter: True
+A conditional <= B conditional for all a != u: True
+distinct B conditional values (a != u): [0.012195121951, 0.012343820563, 1.0]  expected [0.012195121951219513, 0.012343820562998644, 1.0]
+distinct A conditional values (a != u): [0.012195121951, 0.012343820563, 0.5]  expected [0.012195121951219513, 0.012343820562998644, 0.5]
+reversal symmetry max |w(t,u) - w(ubar,tbar)| = 0.0
+power iteration Perron root of full M: 0.9915818850354  (engine-1 quotient value 0.9915818850353568)
+  h=    1: log sum_W P(W)^2 =  8.802071   ( -h/300 = -0.003; -h/600*2 = -0.003)
+  h=    2: log sum_W P(W)^2 =  8.793629   ( -h/300 = -0.007; -h/600*2 = -0.007)
+  h=   10: log sum_W P(W)^2 =  8.726001   ( -h/300 = -0.033; -h/600*2 = -0.033)
+  h=  100: log sum_W P(W)^2 =  7.965163   ( -h/300 = -0.333; -h/600*2 = -0.333)
+  h= 1000: log sum_W P(W)^2 =  0.356791   ( -h/300 = -3.333; -h/600*2 = -3.333)
+  h= 2000: log sum_W P(W)^2 = -8.096957   ( -h/300 = -6.667; -h/600*2 = -6.667)
+  h= 3000: log sum_W P(W)^2 = -16.550704   ( -h/300 = -10.000; -h/600*2 = -10.000)
+  h= 4000: log sum_W P(W)^2 = -25.004452   ( -h/300 = -13.333; -h/600*2 = -13.333)
+  h= 5000: log sum_W P(W)^2 = -33.458199   ( -h/300 = -16.667; -h/600*2 = -16.667)
+  h= 6000: log sum_W P(W)^2 = -41.911946   ( -h/300 = -20.000; -h/600*2 = -20.000)
+done

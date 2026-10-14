@@ -1,0 +1,20 @@
+irreducible quartic (low->high): [1, 0, 1, 1, 1]
+points per line: min/max 82.0 82.0 ; lines per point: min/max 82.0 82.0
+distinct-line intersections: min/max 1.0 1.0 ; diagonal min/max 82.0 82.0
+distinct-point common lines: min/max 1.0 1.0
+letter marginals B: min/max 0.012343820562998644 0.012343820562998644  A: min/max 0.012343820562998644 0.012343820562998644  r = 0.012343820562998644
+dominance max(wA - wB): 0.0
+distinct positive values of wB: [np.float64(0.012195121951), np.float64(0.012343820563), np.float64(1.0)]
+distinct positive values of wA: [np.float64(0.012195121951), np.float64(0.012343820563), np.float64(0.5)]
+reversal symmetry max |w(t,u) - w(ubar,tbar)|: 0.0
+max (Mf)(t)/f(t): 0.9930283575614023  bound 199/200 = 0.995  ok: True
+max ratio over tbar ordinary: 0.9930283575614023  over tbar extra: 0.7166806261926612
+Perron root of M (power iteration): 0.9915818850353514
+h=1: sum_W P(W)^2 = 6.648000e+03;  6678*(199/200)^(h-1) = 6.678000e+03;  e^(-h/400) = 9.975031e-01
+h=2: sum_W P(W)^2 = 6.592110e+03;  6678*(199/200)^(h-1) = 6.644610e+03;  e^(-h/400) = 9.950125e-01
+h=10: sum_W P(W)^2 = 6.161038e+03;  6678*(199/200)^(h-1) = 6.383431e+03;  e^(-h/400) = 9.753099e-01
+h=100: sum_W P(W)^2 = 2.878899e+03;  6678*(199/200)^(h-1) = 4.065663e+03;  e^(-h/400) = 7.788008e-01
+h=1000: sum_W P(W)^2 = 1.428737e+00;  6678*(199/200)^(h-1) = 4.465849e+01;  e^(-h/400) = 8.208500e-02
+h=2000: sum_W P(W)^2 = 3.044643e-04;  6678*(199/200)^(h-1) = 2.971562e-01;  e^(-h/400) = 6.737947e-03
+h=3000: sum_W P(W)^2 = 6.488144e-08;  6678*(199/200)^(h-1) = 1.977268e-03;  e^(-h/400) = 5.530844e-04
+h=4000: sum_W P(W)^2 = 1.382626e-11;  6678*(199/200)^(h-1) = 1.315668e-05;  e^(-h/400) = 4.539993e-05

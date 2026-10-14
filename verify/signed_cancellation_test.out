@@ -1,0 +1,21 @@
+p=3 design: v=13, A_+=A_-=507, B=1014, per line class on A: 2 per 3-subset, 19 empty
+[p3 bipartite] p=3 |A'|=1014 |B'|=1014 step-graph vertices=1028196 components=177849
+    degrees seen=[1, 4, 7]  all deg=1 mod p: True  involution ok: True  loops: 0  sigma flips on every edge: True
+    signed sums = 0 mod p on every component: True   (components with signed sum != 0 over Z: 18474; example sums [-12, -9, -6, -3, 0, 3, 6, 9])
+    control: components with |C| != 0 mod p (unsigned sum fails in char p): 177848
+  control (non-bipartite A, same signs):
+[p3 NON-bipartite control] p=3 |A'|=1014 |B'|=1014 step-graph vertices=1028196 components=177584
+    degrees seen=[1, 4, 7]  all deg=1 mod p: True  involution ok: True  loops: 2  sigma flips on every edge: False
+    signed sums = 0 mod p on every component: False   (components with signed sum != 0 over Z: 101945; example sums [-16, -15, -14, -13, -12, -11, -10, -9])
+    control: components with |C| != 0 mod p (unsigned sum fails in char p): 177582
+p=5 q=5 e=9: A_+=A_-=155, B=31; cross-intersection values [1, 6, 11] mod p [1]
+[p5 bipartite] p=5 |A'|=310 |B'|=31 step-graph vertices=9610 components=2506
+    degrees seen=[1, 6, 11]  all deg=1 mod p: True  involution ok: True  loops: 0  sigma flips on every edge: True
+    signed sums = 0 mod p on every component: True   (components with signed sum != 0 over Z: 124; example sums [-15, -10, -5, 0, 5, 10, 30])
+    control: components with |C| != 0 mod p (unsigned sum fails in char p): 2505
+p=7 q=7 e=13: A_+=A_-=399, B=57; cross-intersection values [1, 8, 15] mod p [1]
+[p7 bipartite] p=7 |A'|=798 |B'|=57 step-graph vertices=45486 components=14428
+    degrees seen=[1, 8, 15]  all deg=1 mod p: True  involution ok: True  loops: 0  sigma flips on every edge: True
+    signed sums = 0 mod p on every component: True   (components with signed sum != 0 over Z: 362; example sums [-7, 0, 7, 14, 63])
+    control: components with |C| != 0 mod p (unsigned sum fails in char p): 14427
+ALL SIGNED CHECKS PASSED: True

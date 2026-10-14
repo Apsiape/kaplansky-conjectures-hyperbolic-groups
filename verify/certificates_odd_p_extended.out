@@ -1,0 +1,8 @@
+extra-plane PG(2,p) checks PASS for odd primes 3..43
+residue bookkeeping for the involution at q=p^5 PASS for odd primes 3..199
+3 ordinary-row slack 8.218936563033647e-05  extra-row slack 2.6423645624563448
+5 ordinary-row slack 8.063755241843334e-05  extra-row slack 4.795605196406118
+7 ordinary-row slack 1.9861299705320855e-05  extra-row slack 6.855616036641008
+11 ordinary-row slack 2.4841401638954957e-06  extra-row slack 10.908708429521214
+13 ordinary-row slack 1.1223042086896572e-06  extra-row slack 12.92284642432727
+Perron row bounds, key inequality, min turn weight, m_empty, congruences PASS for odd primes 3..199

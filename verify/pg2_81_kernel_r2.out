@@ -1,0 +1,16 @@
+GF(81) modulus x^4 + 1 x^3 + 1 x^2 + 0 x + 1 (coeffs low->high (1, 0, 1, 1))
+points/lines: 6643 ; points per line: {82} ; lines per point: {82}
+line intersections: diag {82} offdiag {1}
+lines through 2 points: diag {82} offdiag {1}
+A_+ per line: 39858 types {(0, 1, 2): 82, (): 39038} ...
+B per line: 79716 {(0, 1, 2, 3, 4): 984, (): 78732}
+marginals: A_+ letters/|A_+| in {1.0} (units of r);  B: {1.0}
+distinct w_B values: [0.0, 0.012195121951, 0.012343820563, 1.0]  expected {0, 1/82=0.012195121951, r=0.012343820563, 1}
+distinct w_A values: [0.0, 0.012195121951, 0.012343820563, 0.5]
+domination w_A <= w_B entrywise: True ; max(w_A - w_B) = 0.0
+reversal symmetry max |w_B(t,u) - w_B(ubar,tbar)| = 0.0
+cross-intersection sizes: [1, 4, 82, 85] mod 3: [1, 1, 1, 1]
+max (Mf)/f over tbar ordinary: 0.993028357561402  (claimed 73664436152/74181603769 = 0.993028357561392)
+max (Mf)/f over tbar extra:    0.716680626192661  (claimed 221387048/308906143 = 0.716680626192662)
+all ratios < 199/200: True ; sum f = 6678.0
+power-iteration spectral radius of M: 0.991581885035 (iterations 2999)

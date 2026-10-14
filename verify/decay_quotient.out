@@ -1,0 +1,45 @@
+=== Sanity: OpenAI char-2 design q=128, e=3 (paper claims Mf <= (149/150) f with F=5) ===
+v = 16513  rows (Mf)/f = [0.9931522558179817, 0.6016967603418213, 0.9929118856479198]
+exact rows: [Fraction(500731261911, 504183783481), Fraction(820350863, 1363395845), Fraction(4505490640523, 4537654051329)]
+max row < 149/150 ? True
+paper fraction 1 = 0.9931522558179817  paper fraction 2 = 0.6016967603418213
+Perron root rho(M) for OpenAI design = 0.9927970323510529
+
+=== New design: e = 2p-1 extras, q = smallest power of p with q >= 2e(e+2) ===
+p=3 e=5 q=81 v=6643 |T|=6648 r=82/6643
+  Perron root rho(M) = 0.991581885035   -> admissible delta < -log(rho)/2 = 0.0042268737036685334504183564747024919487298292668537
+  certificate F=9: rows = [0.994515568, 0.557587565, 0.9933258]  max = 0.994515568  sum f = 6688
+  certificate F=10: rows = [0.995259173, 0.501904993, 0.993920684]  max = 0.995259173  sum f = 6693
+p=5 e=9 q=625 v=391251 |T|=391260 r=626/391251
+  Perron root rho(M) = 0.998609651909   -> admissible delta < -log(rho)/2 = 0.0006956577608280023574062920217675603312418693824842
+  certificate F=17: rows = [0.998793059, 0.529527416, 0.99875223]  max = 0.998793059  sum f = 391404
+  certificate F=18: rows = [0.998816025, 0.500110507, 0.998772644]  max = 0.998816025  sum f = 391413
+p=7 e=13 q=2401 v=5767203 |T|=5767216 r=2402/5767203
+  Perron root rho(M) = 0.999612985860   -> admissible delta < -log(rho)/2 = 0.00019354452448771451719716723456671770225966898782077
+  certificate F=25: rows = [0.999640012, 0.520018818, 0.999635852]  max = 0.999640012  sum f = 5767528
+  certificate F=26: rows = [0.999642265, 0.500018181, 0.999637932]  max = 0.999642265  sum f = 5767541
+p=11 e=21 q=1331 v=1772893 |T|=1772914 r=1332/1772893
+  Perron root rho(M) = 0.999497960141   -> admissible delta < -log(rho)/2 = 0.00025108296178730401265660914143811026978667885086041
+  certificate F=41: rows = [0.99973455, 0.512224998, 0.999712005]  max = 0.999734550  sum f = 1773754
+  certificate F=42: rows = [0.999746386, 0.500029447, 0.999723277]  max = 0.999746386  sum f = 1773775
+p=13 e=25 q=2197 v=4829007 |T|=4829032 r=2198/4829007
+  Perron root rho(M) = 0.999674457477   -> admissible delta < -log(rho)/2 = 0.0001627977615107958986555349332478981478663726866015
+  certificate F=49: rows = [0.999798606, 0.51021844, 0.99978867]  max = 0.999798606  sum f = 4830232
+  certificate F=50: rows = [0.99980378, 0.500014175, 0.999793638]  max = 0.999803780  sum f = 4830257
+
+=== p=3 exact data ===
+Q (exact) =
+   [Fraction(6637, 6724), Fraction(5, 6724), Fraction(33620, 44129449)]
+   [Fraction(44633912, 44129449), Fraction(33620, 44129449), Fraction(4, 1)]
+   [Fraction(3319, 3362), Fraction(1, 1681), Fraction(33620, 44129449)]
+char poly: lam**3 - 293339274773*lam**2/296726415076 - 7788474850515694*lam/3273593300262293281 - 23740672058227/40408648294672294
+rho = 0.9915818850353568
+F=9 rows exact: [Fraction(147549519549, 148363207538), Fraction(24606032, 44129449), Fraction(147373001753, 148363207538)] [0.9945155675554427, 0.5575875647121722, 0.9933257995602017]
+sum f = 6688  lambda = 147549519549/148363207538 0.9945155675554427
+
+=== Threshold: smallest power of p with rho < 1, and real threshold in q (for information) ===
+p=3 e=5: smallest p-power q with rho<1: 27 (rho=0.996971); smallest integer q (formal kernel) with rho<1: 25; 2e(e+2) = 70; 2e^2 = 50
+p=5 e=9: smallest p-power q with rho<1: 125 (rho=0.997193); smallest integer q (formal kernel) with rho<1: 81; 2e(e+2) = 198; 2e^2 = 162
+p=7 e=13: smallest p-power q with rho<1: 343 (rho=0.998524); smallest integer q (formal kernel) with rho<1: 169; 2e(e+2) = 390; 2e^2 = 338
+p=11 e=21: smallest p-power q with rho<1: 1331 (rho=0.999498); smallest integer q (formal kernel) with rho<1: 441; 2e(e+2) = 966; 2e^2 = 882
+p=13 e=25: smallest p-power q with rho<1: 2197 (rho=0.999674); smallest integer q (formal kernel) with rho<1: 625; 2e(e+2) = 1350; 2e^2 = 1250

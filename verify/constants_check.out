@@ -1,0 +1,10 @@
+(3) and Prop 4.4 constant inequalities: OK on 3000 (eps, D0) pairs
+15/16 - 1/16 - 1/16 = 13/16 and 6(k'+1) <= 12k' (k' >= 1): OK
+chain (6): |w| < (13/16) eps H0 forces a good cluster: OK
+splitting into segments of length in [UL/3, UL], m <= 2h/UL: OK on 882035 cases
+interval-pair count <= 12H/L in the rooted, free and spherical cases: OK
+rooted case: 13/16 - 1/2 = 5/16 > 0: OK
+Lemma 3.6 arithmetic (walk count, D0 = ceil(d + 4 lambda + 8)): OK
+Lemma 3.5: log2|V| <= lambda L for |V| <= 2n and ln n >= 2/c0: OK
+Corollary 5.4: eps* = 1/2467200 and 16/(13 eps*) = 3036553.85 < 3,036,554: OK
+ALL CHECKS PASSED

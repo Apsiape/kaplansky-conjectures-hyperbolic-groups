@@ -1,0 +1,17 @@
+l=3: v-link isomorphic to incidence graph of AG(2,3): True; girth = 6
+l=3: two members mapped to the same subgroup -> v-link girth = 4 (4-cycle created)
+l=3, q=4: f-link K_(l,q) girth = 4
+l=3, q=8: f-link K_(l,q) girth = 4
+l=5: v-link isomorphic to incidence graph of AG(2,5): True; girth = 6
+l=5: two members mapped to the same subgroup -> v-link girth = 4 (4-cycle created)
+l=5, q=4: f-link K_(l,q) girth = 4
+l=5, q=8: f-link K_(l,q) girth = 4
+l=7: v-link isomorphic to incidence graph of AG(2,7): True; girth = 6
+l=7: two members mapped to the same subgroup -> v-link girth = 4 (4-cycle created)
+l=7, q=4: f-link K_(l,q) girth = 4
+l=7, q=8: f-link K_(l,q) girth = 4
+pi/6+pi/2+pi/3 = pi (Euclidean (2,3,6) triangle)
+pi/7+pi/2+pi/3 = 41*pi/42 < pi: True (hyperbolic (2,3,7) triangle)
+girth*angle - 2pi:  v-link 6*pi/3: 0  f-link 4*pi/2: 0  O-link 12*pi/6: 0  O-link 14*pi/7: 0
+girth 12 forces angle sum >= pi (= pi: Euclidean at best); girth 14 allows angle sum 41*pi/42 < pi
+ALL CHECKS PASSED

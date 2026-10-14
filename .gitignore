@@ -1,0 +1,11 @@
+paper/build/
+lean/.lake/
+lean/build/
+*.aux
+*.log
+*.out
+!verify/*.out
+*.toc
+*.bbl
+*.blg
+__pycache__/

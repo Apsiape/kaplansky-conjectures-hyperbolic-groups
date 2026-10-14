@@ -1,0 +1,41 @@
+=== p = 3, q = 81: exact row bounds (proof of Lemma 6.4) ===
+v = 6643  r = 82/6643  c_p = 6  |T| = 6648
+B kernel: {'marg_o': '82/6643', 'marg_e': '82/6643', 'oo': '1/82', 'oe': '82/6643', 'eo': '82/6643', 'ee': '1'}
+A kernel: {'marg_o': '82/6643', 'marg_e': '82/6643', 'oo': '1/82', 'oe': '82/6643', 'eo': '82/6643', 'ee': '1/2'}
+domination A <= B at class level: True ; A extra-extra = 1/2
+reversal symmetry (mixed entries equal): True
+ordinary row bound = 73664436152/74181603769 = 0.9930283575613915
+extra row bound    = 221387048/308906143 = 0.716680626192662
+claimed ordinary   = 73664436152/74181603769 -> True
+claimed extra      = 221387048/308906143     -> True
+both < 199/200: True
+exact (Mf)/f per class: {'X': 0.9921360315649608, 'Y': 0.716680626192662, 'Z': 0.9930283575613915}
+max class ratio equals claimed ordinary bound: True ; Y-ratio equals extra bound: True
+spectral radius of lumped M (= decay base of sum P(W)^2): 0.9915818850353569
+sum f = 6678
+smallest h with 6678*(199/200)^(h-1) <= e^{-h/400}: 3508 (the paper states h >= 3508)
+holds at h=4000: True
+n0 = 529553388 ; per line on A_+: each p-subset 82 , empty 39038 ; per line on B: all extras 984 , empty 78732 ; A-pool nr/2 = 3268356
+cross sizes: [1, 4, 82, 85] mod p: [1, 1, 1, 1]
+
+=== General odd p (proof of Lemma 6.4), smallest admissible q = p^k >= 2e(e+2) ===
+p= 3 e= 5 q=   81 2e(e+2)=   70 v=6643 c_p=6
+   U=0.993028358 (<0.993139431 <= 0.993977718 < 1: True)  V=0.716680626 (< 0.716702593 < 1: True)
+   exact lumped (Mf)/f: X=0.992136032 Y=0.716680626 Z=0.993028358; max==U: True, Y==V: True
+   Perron root of lumped M = 0.991581885;  A-extra-extra freq = 1/2; integrality at 2c_p v^2: True;  cross mod p: [1, 1, 1, 1]; min degree q+1 = 82, d_* = 87
+p= 5 e= 9 q=  625 2e(e+2)=  198 v=391251 c_p=70
+   U=0.998655260 (<0.998655996 <= 0.999202556 < 1: True)  V=0.818347985 (< 0.818348218 < 1: True)
+   exact lumped (Mf)/f: X=0.998629742 Y=0.818347985 Z=0.998655260; max==U: True, Y==V: True
+   Perron root of lumped M = 0.998609652;  A-extra-extra freq = 1/2; integrality at 2c_p v^2: True;  cross mod p: [1, 1, 1, 1]; min degree q+1 = 626, d_* = 635
+p= 7 e=13 q= 2401 2e(e+2)=  390 v=5767203 c_p=924
+   U=0.999617480 (<0.999617506 <= 0.999791927 < 1: True)  V=0.866696526 (< 0.866696538 < 1: True)
+   exact lumped (Mf)/f: X=0.999615053 Y=0.866696526 Z=0.999617480; max==U: True, Y==V: True
+   Perron root of lumped M = 0.999612986;  A-extra-extra freq = 1/2; integrality at 2c_p v^2: True;  cross mod p: [1, 1, 1, 1]; min degree q+1 = 2402, d_* = 2415
+p=11 e=21 q= 1331 2e(e+2)=  966 v=1772893 c_p=184756
+   U=0.999521499 (<0.999521890 <= 0.999624907 < 1: True)  V=0.913087458 (< 0.913087483 < 1: True)
+   exact lumped (Mf)/f: X=0.999509099 Y=0.913087458 Z=0.999521499; max==U: True, Y==V: True
+   Perron root of lumped M = 0.999497960;  A-extra-extra freq = 1/2; integrality at 2c_p v^2: True;  cross mod p: [1, 1, 1, 1]; min degree q+1 = 1332, d_* = 1353
+p=13 e=25 q= 2197 2e(e+2)= 1350 v=4829007 c_p=2704156
+   U=0.999684762 (<0.999684885 <= 0.999772624 < 1: True)  V=0.925947764 (< 0.925947772 < 1: True)
+   exact lumped (Mf)/f: X=0.999679381 Y=0.925947764 Z=0.999684762; max==U: True, Y==V: True
+   Perron root of lumped M = 0.999674457;  A-extra-extra freq = 1/2; integrality at 2c_p v^2: True;  cross mod p: [1, 1, 1, 1]; min degree q+1 = 2198, d_* = 2223

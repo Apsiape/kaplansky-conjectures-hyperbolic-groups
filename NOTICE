@@ -1,0 +1,16 @@
+Kaplansky's conjectures fail for torsion-free hyperbolic groups in positive characteristic
+Copyright 2026 Seth Douglas and Nidhal Mghirbi
+
+The paper builds on preprints of OpenAI's mathematics release, https://github.com/openai/math, in particular
+"A Torsion-Free Group Algebra with Zero Divisors" (23 September 2026), "A Torsion-Free Group Algebra That Is Not
+Directly Finite" (4 October 2026) and "A Counterexample to Kaplansky's Direct-Finiteness Conjecture in
+Characteristic Two" (23 September 2026). In particular:
+
+- the cone-on-graphs construction, the groups and elements of those preprints, and every estimate the paper
+  imports from them are OpenAI's work; the paper lists the inputs it uses (Theorem 3.4 and Table 2) and gives a
+  sentence-level account of credit (Section 11);
+- the signed cancellation and the two-colour model used in Sections 6 and 7 were found first by S. V. Ivanov
+  (arXiv:2610.17662) and independently by the authors; Ivanov has precedence.
+
+No OpenAI source text, code or Lean file is redistributed in this repository. OpenAI's material is referenced by
+commit and must be obtained from the repository above, under its own terms.
