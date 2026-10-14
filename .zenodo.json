@@ -2,13 +2,13 @@
   "title": "Kaplansky's conjectures fail for torsion-free hyperbolic groups in positive characteristic",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "creators": [
     {
-      "name": "Douglas, Seth"
+      "name": "Mghirbi, Nidhal"
     },
     {
-      "name": "Mghirbi, Nidhal"
+      "name": "Douglas, Seth"
     }
   ],
   "description": "<p>Do Kaplansky's group-ring conjectures hold for torsion-free word-hyperbolic groups? We show that all four fail in positive characteristic. For every prime p there is a finitely presented, torsion-free, word-hyperbolic group G with a finite two-dimensional classifying space and a, b in F_p[G] with ab = 1 ≠ ba. So, over every field of characteristic p, the group algebra of G is not directly finite and has a non-trivial idempotent, zero divisor and unit, and G is neither sofic nor surjunctive. For p = 2, G, a and b come from OpenAI's random construction, and we add that G is hyperbolic with probability 1 − o(1), as are OpenAI's zero-divisor groups. For odd p the groups are new: they adapt OpenAI's direct-finiteness construction with a signed cancellation, found first by S. V. Ivanov and independently by us, via an exact solution of a colour-balance problem and a Perron certificate. As far as we know, they are the first torsion-free counterexamples to direct finiteness and to the idempotent conjecture in odd characteristic. Hyperbolicity comes from one deterministic criterion: if a labelled graph is pattern-free, the group obtained by coning off its components is aspherical and has a linear isoperimetric inequality. We prove it by running OpenAI's exclusion of reduced spheres on van Kampen discs, an accounting OpenAI used for another complex. The probabilistic inputs are OpenAI's estimates: formalized in Lean, in an existence form, for their zero-divisor model; checked independently by us for their direct-finiteness model; and rerun for our models. In characteristic zero, where the idempotent and direct-finiteness conjectures hold for torsion-free hyperbolic groups, we show that no cancellation built into the vertex types survives the decay estimate that makes the groups torsion-free. OpenAI's characteristic-two counterexample with torsion is a CAT(0) group.</p>",

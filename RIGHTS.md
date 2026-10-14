@@ -1,6 +1,6 @@
 # Licensing
 
-Copyright 2026 Seth Douglas and Nidhal Mghirbi.
+Copyright 2026 Nidhal Mghirbi and Seth Douglas.
 
 - **Paper and documentation.** Unless separately credited, the authors' material in this repository is licensed
   under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**: the paper (`paper/main.pdf`),
