@@ -4,7 +4,7 @@ Nidhal Mghirbi and Seth Douglas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23374263.svg)](https://doi.org/10.5281/zenodo.23374263)
 
-Version 1.0.2 (26 October 2026) reports Nidhal Mghirbi's Lean 4 formalization of the Main Theorem, whose source
+Version 1.0.2 (26 October 2026; [doi:10.5281/zenodo.23673698](https://doi.org/10.5281/zenodo.23673698)) reports Nidhal Mghirbi's Lean 4 formalization of the Main Theorem, whose source
 is included in this repository, corrects a sentence of the introduction (Agol's theorem gives the zero-divisor
 conjecture for cubulated *hyperbolic* groups, not for all cubulated groups), cites work posted since version 1.0.0
 and updates the references; no mathematical statement changes. Version 1.0.1 ([doi:10.5281/zenodo.23374592](https://doi.org/10.5281/zenodo.23374592))
