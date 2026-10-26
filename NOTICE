@@ -12,5 +12,12 @@ Characteristic Two" (23 September 2026). In particular:
 - the signed cancellation and the two-colour model used in Sections 6 and 7 were found first by S. V. Ivanov
   (arXiv:2610.17662) and independently by the authors; Ivanov has precedence.
 
-No OpenAI source text, code or Lean file is redistributed in this repository. OpenAI's material is referenced by
-commit and must be obtained from the repository above, under its own terms.
+The folder lean/KaplanskyLean/OAI/ redistributes Lean modules from the repository above (commit
+1581d4cbdd69a0faf34b2089614fe2a814316a6a, directory lean/) under OpenAI's Apache License 2.0, whose text is in
+lean/KaplanskyLean/OAI/LICENSE-APACHE-2.0-OpenAI. No line is changed except import lines and a per-file modification notice, and one file,
+GraphMetric.lean, is an excerpt of OpenAI's CayleyMetric.lean; both are recorded in
+lean/KaplanskyLean/OAI/VENDOR.md. No other OpenAI source text or code is redistributed in this repository; the rest
+of OpenAI's material is referenced by commit and must be obtained from the repository above, under its own terms.
+
+The Lean development in lean/KaplanskyLean/ is Copyright 2026 Nidhal Mghirbi and is licensed under the Apache License
+2.0 (lean/KaplanskyLean/LICENSE).

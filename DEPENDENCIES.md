@@ -5,19 +5,23 @@ paper. Everything else is proved in the paper or is classical. Numbers refer to 
 
 ## The four inputs (Theorem 3.4, Table 2)
 
-| Input | [OAI-196] | [OAI-197a] | Lean, model of [OAI-196] (commit adc7f12; unchanged at 1581d4c) | odd p, zero divisors (Section 6) | odd p, direct finiteness (Section 7) |
-|---|---|---|---|---|---|
-| (a) types: degrees; parity or congruence of the intersections | Section 2.1, (2.1) | Section 3.1, Prop. 3.1 | `degreeA_bounds`, `degreeB_bounds`, `odd_cross_intersections` (PatternCount.lean) | Lemma 6.3 | Lemma 7.2 |
-| (b) a matching with girth >= L exists | Lemma 2.2 | Section 3.3 | `TypedGraphs.eventual_nonempty` (TypedGraphs.lean) | Lemma 6.5 | Prop. 7.9(a) |
-| (c) component diameter <= dL with probability 1 - o(1) | Lemma 2.3 | Prop. 3.4 | `diameterA_tendsto`, `diameterB_tendsto` (TypedDiameter.lean) | Lemma 6.6 | Prop. 7.9(b) |
-| (d) bounded-pattern estimate | Prop. 3.1 | Thm. 4.1 | `SampleGraph.exists_avoiding` (BoundedSystem.lean): existence form, (b)-(c) included, eps = 1/2467200, `I` counts interval sides | Prop. 6.7 | Prop. 7.9(c) |
+| Input | [OAI-196] | [OAI-197a] | OpenAI's Lean, model of [OAI-196] (commit adc7f12; unchanged at 1581d4c) | odd p, zero divisors (Section 6) | odd p, direct finiteness (Section 7) | Lean [Mgh26], models of [OAI-197a] and Section 7 |
+|---|---|---|---|---|---|---|
+| (a) types: degrees; parity or congruence of the intersections | Section 2.1, (2.1) | Section 3.1, Prop. 3.1 | `degreeA_bounds`, `degreeB_bounds`, `odd_cross_intersections` (PatternCount.lean) | Lemma 6.3 | Lemma 7.2 | `Random.OAI197a.degree_bounds`, `parity_AA`, `parity_root`, `parity_AB`; `OddDesign.cong_allTypes` |
+| (b) a matching with girth >= L exists | Lemma 2.2 | Section 3.3 | `TypedGraphs.eventual_nonempty` (TypedGraphs.lean) | Lemma 6.5 | Prop. 7.9(a) | in `exists_patternFree` below |
+| (c) component diameter <= dL with probability 1 - o(1) | Lemma 2.3 | Prop. 3.4 | `diameterA_tendsto`, `diameterB_tendsto` (TypedDiameter.lean) | Lemma 6.6 | Prop. 7.9(b) | in `exists_patternFree` below |
+| (d) bounded-pattern estimate | Prop. 3.1 | Thm. 4.1 | `SampleGraph.exists_avoiding` (BoundedSystem.lean): existence form, (b)-(c) included, eps = 1/2467200, `I` counts interval sides | Prop. 6.7 | Prop. 7.9(c) | `Random.OAI197a.exists_patternFree`, `Random.Odd.exists_patternFree`: existence form, (b)-(c) included |
 
 Status of the inputs:
-- **[OAI-196] model:** formalized in OpenAI's Lean development, in the existence form used in Corollary 5.4. The
-  development was read, not rebuilt.
-- **[OAI-197a] model:** not formalized. The authors re-derived Lemma 3.3, the switching argument of Section 3.3,
-  Proposition 3.4, Theorem 4.1 with Lemmas 4.2-4.4, and Lemma 5.3 of [OAI-197a] step by step, and confirmed the
-  model-specific constants by exact computation; no gap was found.
+- **[OAI-196] model:** formalized in OpenAI's Lean development, in the existence form used in Corollary 5.4. These
+  modules are included, unchanged except for import lines, in the Lean formalization [Mgh26] and built with it.
+- **[OAI-197a] model:** formalized in [Mgh26], (a) as stated and (b)-(d) in existence form, for the model of
+  [OAI-197a, Section 3.1] with one of the type assignments allowed there, along the admissible sizes
+  n = v(4v(m+1)+1). The probabilistic form used in Theorem A is not formalized; for it, the authors re-derived
+  Lemma 3.3, the switching argument of Section 3.3, Proposition 3.4, Theorem 4.1 with Lemmas 4.2-4.4, and
+  Lemma 5.3 of [OAI-197a] step by step, and confirmed the model-specific constants by exact computation; no gap
+  was found.
+- **Section 7 model:** formalized in [Mgh26], (a) as stated and (b)-(d) in existence form.
 - **Sections 6 and 7:** (a) is proved directly. (b)-(d) are proved by rerunning the proofs of [OAI-196,
   Lemmas 2.2, 2.3, Prop. 3.1] and [OAI-197a, Section 3.3, Lemma 3.3, Prop. 3.4, Thm. 4.1] with the
   model-dependent counts replaced (pool sizes, turn counts, decay, colour data); the model-independent parts of
@@ -62,3 +66,46 @@ Status of the inputs:
 | Corollary 7.13 | Elek-Szabo; Agol; Fisher-Sanchez-Peralta; Arzhantseva-Paunescu | - |
 | Theorem 8.1, Corollary 8.2, Prop. 8.3 | linear algebra (weighted trace bound); Perron-Frobenius; weak Nullstellensatz | - |
 | Theorem 9.1, Theorem D | link condition, developability, gluing (Bridson-Haefliger); [OAI-197b] | `cat0_links_check.py` |
+
+## The Lean formalization [Mgh26]
+
+Nidhal Mghirbi's Lean 4 development (Lean v4.34.1, Mathlib `d13f23b`). Statements in `Kaplansky/Challenge.lean`
+(definitions of torsion-freeness, finite two-dimensional classifying space and word-hyperbolicity copied verbatim
+from OpenAI's Comparator challenges `TorsionFreeZeroDivisors.lean` and `TorsionFreeHyperbolic.lean`, specialised
+to `Type`). Build record of 25 October 2026: `lake build Kaplansky.Final.Main` succeeds; `#print axioms` =
+[propext, Classical.choice, Quot.sound] for the main theorems; no `sorry` outside the statement file. Vendored
+OpenAI modules (Apache-2.0): the import closure of `OAI.Algebra.GroupRing.Main`, four files of
+`OAI.GroupTheory.Hyperbolic` (one of them lines 1-39 of `CayleyMetric.lean`) and `OAI.Algebra.OddKaplansky.Cellular`
+(not used), with no line changed except import lines (checked against openai/math commit adc7f12;
+OpenAI's files used are unchanged at 1581d4c). Names below are relative to the namespace `Kaplansky`.
+
+| Paper | Lean declarations | Form |
+|---|---|---|
+| Main Theorem | `Final.mainTheorem_proof`, `Final.mainTheoremConsequences_proof` | as stated |
+| Lemmas 2.1, 2.2, order p, base change | `Algebra.onesided`, `Algebra.one_add_ne_single`, `Algebra.orderOf_unitOfSqZero`, `Algebra.baseChange_injective` | as stated |
+| Lemma 2.3 | `Algebra.sqZero_of_zeroDivisor_of_prime` | primeness of K[G] (Connell) assumed |
+| Definition 3.3 | `Exclusion.PatternFree` | degree >= 7 in (P1) |
+| Lemmas 3.6-3.8, Appendix A | OpenAI's formal versions in `OAI.Algebra.GroupRing` | closure lemma for degree >= 7 |
+| Proposition 4.4 | `Exclusion.MapSystem.key_estimate`, `Exclusion.Capped.cone_bound` | as stated |
+| Theorem B | `Main.theoremB`, `Main.theoremB_coneLength` | area bound as a cone-length bound; degree >= 7 |
+| Proposition 5.1 | `Parity.parity_product_zero`, `Parity.parity_mul_star_eq_one`, `Parity.parity_star_mul_ne_one` | as stated |
+| Corollary 5.2 | `Final.two_counterexample` | some b in place of a*; not "neither sofic nor surjunctive" |
+| Corollary 5.4 | `Main.hyperbolicZeroDivisors_proof` | a single example (one outcome at one size, not for all large n); without the unit and the explicit constant |
+| Lemma 6.1 | `Parity.signed_handshake`, `Parity.signed_product_zero`, `Parity.sum_single_ne_zero` | as stated |
+| Definition 7.1, Lemma 7.2 | `OddDesign.cong_types`, `OddDesign.cong_root_type`, `OddDesign.rootSet_card_mod`, `OddDesign.cong_allTypes` | as stated |
+| Lemma 7.3 | `OddDesign.lattice_a`, `lattice_b`, `lattice_c_q`, `lattice_c_ord` | as stated |
+| Lemma 7.4 | `OddDesign.dvd_lineSum`, `sum_z`, `zVec_eq_sum`, `card_z_eq_of_mem`, `zz_zpair` | as stated |
+| Lemma 7.5 | `OddDesign.exists_bar` | as stated |
+| Proposition 7.6 | `OddDesign.inLL_rootVec`, `OddDesign.balance`, `OddDesign.balance_card` | as stated |
+| Lemma 7.7 | `OddDesign.pairU_real`, `OddDesign.pair_Ap`, `pair_Am`, `pair_B` | as stated |
+| Lemma 7.8 | `OddDesign.perron_certificate`, `OddDesign.squared_word_bound`, `OddDesign.decay_paper` | as stated |
+| Proposition 7.9, Corollary 7.10 | `Random.Odd.exists_patternFree` | existence form, with a smaller explicit eps and scale L (delta = 1/(8(q+1)), a_0 = 2(q+1)) |
+| Proposition 7.11 | `Parity.oddWitness`, `Final.exists_not_directlyFinite` | the second sums over all of A |
+| Theorem C | `Final.odd_counterexample` | without c; not "neither sofic nor surjunctive" |
+| Inputs (a)-(d) for [OAI-197a] | `Random.OAI197a.degree_bounds`, `parity_AA`, `parity_root`, `parity_AB`, `decays`, `exists_patternFree` | (b)-(d) in existence form |
+
+Not formalized: the probability statement of Theorem A; Lemma 2.4 (soficity, surjunctivity); Connell's theorem
+(Lemma 2.3), used for the units of Corollaries 5.3, 5.4 and Proposition 6.9; Lemma 4.2(a) and the explicit
+constants of Theorem A and Corollary 5.4, and the quantifier over all large n in Corollary 5.4; Section 6 apart
+from Lemma 6.1; Corollary 7.13 and Remark 7.14; Section 8; Theorem 9.1 and Theorem D. The units of the Main
+Theorem come from Lemmas 2.1 and 2.2 and are formalized.

@@ -4,13 +4,25 @@ Nidhal Mghirbi and Seth Douglas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23374263.svg)](https://doi.org/10.5281/zenodo.23374263)
 
-Version 1.0.1 ([doi:10.5281/zenodo.23374592](https://doi.org/10.5281/zenodo.23374592)) corrects the author order (Nidhal Mghirbi, Seth Douglas); the mathematics is unchanged from version 1.0.0 ([doi:10.5281/zenodo.23374264](https://doi.org/10.5281/zenodo.23374264)). All versions: [doi:10.5281/zenodo.23374263](https://doi.org/10.5281/zenodo.23374263).
+Version 1.0.2 (26 October 2026) reports Nidhal Mghirbi's Lean 4 formalization of the Main Theorem, whose source
+is included in this repository, corrects a sentence of the introduction (Agol's theorem gives the zero-divisor
+conjecture for cubulated *hyperbolic* groups, not for all cubulated groups), cites work posted since version 1.0.0
+and updates the references; no mathematical statement changes. Version 1.0.1 ([doi:10.5281/zenodo.23374592](https://doi.org/10.5281/zenodo.23374592))
+corrected the author order (Nidhal Mghirbi, Seth Douglas) of version 1.0.0
+([doi:10.5281/zenodo.23374264](https://doi.org/10.5281/zenodo.23374264)). All versions:
+[doi:10.5281/zenodo.23374263](https://doi.org/10.5281/zenodo.23374263).
+
+## Summary
+
+*A short summary for this page. The abstract is the one in the paper; the Zenodo record carries the same text.*
 
 Do Kaplansky's group-ring conjectures hold for torsion-free word-hyperbolic groups? In positive characteristic,
 no. For every prime p there is a finitely presented, torsion-free, word-hyperbolic group G with a finite
 two-dimensional classifying space and a, b in F_p[G] with ab = 1 but ba != 1. So over every field of
 characteristic p the group algebra of G is not directly finite, and it has a non-trivial idempotent, a zero
-divisor and a non-trivial unit. For every prime p, a single group fails all four.
+divisor and a non-trivial unit. For every prime p, a single group fails all four. This statement, for every
+prime p and over every field of characteristic p, is formalized in Lean 4, including existence forms of the
+random-graph estimates it uses (see below).
 
 | Conjecture, for torsion-free hyperbolic groups | characteristic 0 | characteristic 2 | odd characteristic |
 |---|---|---|---|
@@ -34,7 +46,9 @@ divisor and a non-trivial unit. For every prime p, a single group fails all four
   not directly finite. As far as we know, these are the first torsion-free counterexamples to direct
   finiteness and to the idempotent conjecture in odd characteristic. The construction signs OpenAI's
   direct-finiteness certificate, with one exception at a root, and needs an exact solution of a colour-balance
-  problem and a rational Perron certificate.
+  problem and a rational Perron certificate. On 15 October 2026, the day after version 1.0.0, Bunina, Lee,
+  Miasnikov and Muliarchyk (arXiv:2610.22536) independently gave, for every odd p, a finitely presented group
+  whose group algebra over F_p is not directly finite; torsion-freeness and hyperbolicity are not claimed there.
 - **Zero divisors, odd p (Proposition 6.9).** Torsion-free zero divisors in odd characteristic were found first
   by S. V. Ivanov (arXiv:2610.17662) and independently by the authors, by the same signed mechanism; Ivanov has
   precedence. For hyperbolic groups they are subsumed by Theorem C; Proposition 6.9 adds that groups built with
@@ -46,15 +60,42 @@ divisor and a non-trivial unit. For every prime p, a single group fails all four
   estimate (his Section 8.2).
 - **Theorem D.** OpenAI's characteristic-two counterexample with torsion is a CAT(0) group.
 
+## The Lean formalization
+
+Nidhal Mghirbi has formalized the Main Theorem in Lean 4 (Lean v4.34.1, Mathlib `d13f23b`; reference [Mgh26] of
+the paper). The development is in [`lean/KaplanskyLean/`](lean/KaplanskyLean/), with build instructions in its
+README; the release of version 1.0.2 archives it on Zenodo with the paper
+([doi:10.5281/zenodo.23374263](https://doi.org/10.5281/zenodo.23374263), all versions). The statements are in one
+file, [`Kaplansky/Challenge.lean`](lean/KaplanskyLean/Kaplansky/Challenge.lean), whose definitions of
+torsion-freeness, of a finite two-dimensional classifying space and of word-hyperbolicity are copied verbatim from
+OpenAI's public Comparator challenges. In
+[`Kaplansky/Final/Main.lean`](lean/KaplanskyLean/Kaplansky/Final/Main.lean), `Kaplansky.Final.mainTheorem_proof`
+proves, for every prime p, the existence of G, a and b, and `Kaplansky.Final.mainTheoremConsequences_proof` proves
+the failure of all four conjectures over every field of characteristic p; [`Audit.lean`](lean/KaplanskyLean/Audit.lean)
+checks their types and prints their axioms. The build record (25 October 2026) reports
+`lake build Kaplansky.Final.Main` succeeding and `#print axioms` = [propext, Classical.choice, Quot.sound] for both.
+The development includes OpenAI's Lean modules for their zero-divisor result and parts of two other OpenAI
+developments (the non-residually-finite hyperbolic group, and odd-characteristic direct finiteness). They retain the
+upstream source except for the import adaptations and the excerpt of `CayleyMetric.lean` as `GraphMetric.lean`, each
+modified file carrying a notice, as documented in `lean/KaplanskyLean/OAI/VENDOR.md`; they are redistributed under
+OpenAI's Apache License 2.0. Corollary 5.4 is formalized as a single example (one
+outcome at one size), without the unit and the area constant. Not formalized: the probability statement of
+Theorem A, non-soficity and non-surjunctivity, the explicit area constants, Section 6 apart from Lemma 6.1,
+Corollary 7.13, Section 8 and Theorem D. Appendix C of the paper and `DEPENDENCIES.md` list what is formalized.
+The remaining point of trust is that the definitions in the statement file mean what the paper means. Nidhal
+Mghirbi's files are under the Apache License 2.0, and the vendored OpenAI modules under OpenAI's Apache License 2.0.
+
 ## What rests on OpenAI's preprints
 
 The probabilistic inputs are four statements about random graphs (types, girth, diameter, bounded-pattern
-estimate; Theorem 3.4 and Table 2 of the paper). For OpenAI's zero-divisor model they are formalized in OpenAI's
-Lean development, in the existence form used in Corollary 5.4 (the authors read the development but did not
-rebuild it). For OpenAI's direct-finiteness model they are not formalized, and the authors have checked
-their proofs independently. For the paper's two odd-characteristic models they are proved in Sections 6 and 7 by
-rerunning OpenAI's proofs with the model-dependent counts replaced, as Ivanov did for his two-colour model. Everything else is proved in the paper or
-classical. `DEPENDENCIES.md` maps every statement to its inputs.
+estimate; Theorem 3.4 and Table 2 of the paper). In the existence form used by the Main Theorem they are formalized
+for both models it uses (OpenAI's direct-finiteness model and the model of Section 7), so the Main Theorem does not
+rest on any unformalized OpenAI text. In the probabilistic form used by Theorem A: for OpenAI's zero-divisor model
+they are formalized by OpenAI in the existence form used in Corollary 5.4, and checked line by line by Ivanov; for
+OpenAI's direct-finiteness model the authors have checked OpenAI's proofs independently. For the paper's two
+odd-characteristic models they are proved in Sections 6 and 7 by rerunning OpenAI's proofs with the model-dependent
+counts replaced, as Ivanov did for his two-colour model. Everything else is proved in the paper or classical.
+`DEPENDENCIES.md` maps every statement to its inputs.
 
 ## Contents
 
@@ -63,18 +104,21 @@ classical. `DEPENDENCIES.md` maps every statement to its inputs.
 | `paper/main.tex`, `paper/main.pdf` | the paper |
 | `paper/build.py` | build script |
 | `verify/` | the verification scripts, their recorded outputs (`*.out`) and `run_all.sh` |
+| `lean/KaplanskyLean/` | Nidhal Mghirbi's Lean 4 formalization of the Main Theorem |
+| `tools/check_abstract.py` | checks that the paper and the Zenodo metadata carry the same abstract |
 | `DEPENDENCIES.md` | statement-by-statement dependency map |
 | `SOURCES.md` | the external sources read, with hashes |
 
 ## Building the paper
 
-With `pdflatex` (packages mathpazo, tcolorbox, tikz, cleveref, aliascnt and xurl), run
+With `pdflatex` (packages mathpazo, tcolorbox, tikz, cleveref, aliascnt, xurl, array and placeins), run
 
 ```
 python paper/build.py
 ```
 
 It runs three passes and stops if a reference is undefined, a label is duplicated or a box is overfull.
+`python tools/check_abstract.py` compares the abstract of the paper with the description in `.zenodo.json`.
 
 ## The verification package
 
@@ -111,8 +155,9 @@ through the link computation behind Theorem D, recorded in OpenAI's reasoning tr
 the two-colour model and the transfer of OpenAI's estimates to that model, with the colour data in the pattern
 count, were found first by S. V. Ivanov (arXiv:2610.17662) and independently by the authors; Ivanov has
 precedence, and his decay estimate for his own design uses an explicit test vector. The sign rule appears
-earlier as Mineyev's signature condition. Section 11 of the paper gives a sentence-level account, including how
-the work was done.
+earlier as Mineyev's signature condition. The Lean formalization of the Main Theorem is Nidhal Mghirbi's; it
+builds on OpenAI's Lean development. Section 11 of the paper gives a sentence-level account, including how the
+work was done.
 
 ## License
 

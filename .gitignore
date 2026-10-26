@@ -1,5 +1,7 @@
 paper/build/
 lean/.lake/
+lean/KaplanskyLean/.lake/
+lean/evidence/
 lean/build/
 *.aux
 *.log
@@ -9,3 +11,4 @@ lean/build/
 *.bbl
 *.blg
 __pycache__/
+arxiv/

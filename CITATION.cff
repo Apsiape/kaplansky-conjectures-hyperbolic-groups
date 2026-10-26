@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite the paper; this repository supplies its LaTeX source and the scripts of its verification package."
+message: "Please cite the paper; this repository supplies its LaTeX source, the scripts of its verification package and the Lean formalization of its Main Theorem."
 type: software
 title: "Kaplansky's conjectures fail for torsion-free hyperbolic groups in positive characteristic"
-version: 1.0.1
+version: 1.0.2
+date-released: "2026-10-26"
 doi: 10.5281/zenodo.23374263
 identifiers:
   - type: doi
@@ -67,6 +68,20 @@ references:
     notes: "arXiv:2610.17662. The signed cancellation and the two-colour model used in Sections 6 and 7 were found first by Ivanov and independently by the authors; Ivanov has precedence."
   - type: generic
     authors:
+      - family-names: Bunina
+        given-names: Elena I.
+      - family-names: Lee
+        given-names: Winston
+      - family-names: Miasnikov
+        given-names: Alexei
+      - family-names: Muliarchyk
+        given-names: Kyrylo
+    title: "Failure of direct finiteness for group algebras in every odd characteristic"
+    year: 2026
+    url: "https://arxiv.org/abs/2610.22536"
+    notes: "arXiv:2610.22536, 15 October 2026. Independent construction, for every odd prime, of finitely presented groups whose group algebras over F_p are not directly finite; torsion-freeness and hyperbolicity are not claimed."
+  - type: generic
+    authors:
       - family-names: Douglas
         given-names: Seth
       - family-names: Mghirbi
@@ -84,7 +99,7 @@ preferred-citation:
     - family-names: Douglas
       given-names: Seth
   year: 2026
-  version: 1.0.1
+  version: 1.0.2
   doi: 10.5281/zenodo.23374263
   url: "https://doi.org/10.5281/zenodo.23374263"
   notes: "Preprint. The paper is licensed CC BY 4.0 and the scripts MIT or Apache 2.0; see RIGHTS.md."

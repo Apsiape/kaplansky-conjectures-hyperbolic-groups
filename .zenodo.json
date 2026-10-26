@@ -2,7 +2,8 @@
   "title": "Kaplansky's conjectures fail for torsion-free hyperbolic groups in positive characteristic",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "publication_date": "2026-10-26",
   "creators": [
     {
       "name": "Mghirbi, Nidhal"
@@ -11,7 +12,7 @@
       "name": "Douglas, Seth"
     }
   ],
-  "description": "<p>Do Kaplansky's group-ring conjectures hold for torsion-free word-hyperbolic groups? We show that all four fail in positive characteristic. For every prime p there is a finitely presented, torsion-free, word-hyperbolic group G with a finite two-dimensional classifying space and a, b in F_p[G] with ab = 1 ≠ ba. So, over every field of characteristic p, the group algebra of G is not directly finite and has a non-trivial idempotent, zero divisor and unit, and G is neither sofic nor surjunctive. For p = 2, G, a and b come from OpenAI's random construction, and we add that G is hyperbolic with probability 1 − o(1), as are OpenAI's zero-divisor groups. For odd p the groups are new: they adapt OpenAI's direct-finiteness construction with a signed cancellation, found first by S. V. Ivanov and independently by us, via an exact solution of a colour-balance problem and a Perron certificate. As far as we know, they are the first torsion-free counterexamples to direct finiteness and to the idempotent conjecture in odd characteristic. Hyperbolicity comes from one deterministic criterion: if a labelled graph is pattern-free, the group obtained by coning off its components is aspherical and has a linear isoperimetric inequality. We prove it by running OpenAI's exclusion of reduced spheres on van Kampen discs, an accounting OpenAI used for another complex. The probabilistic inputs are OpenAI's estimates: formalized in Lean, in an existence form, for their zero-divisor model; checked independently by us for their direct-finiteness model; and rerun for our models. In characteristic zero, where the idempotent and direct-finiteness conjectures hold for torsion-free hyperbolic groups, we show that no cancellation built into the vertex types survives the decay estimate that makes the groups torsion-free. OpenAI's characteristic-two counterexample with torsion is a CAT(0) group.</p>",
+  "description": "<p>Do Kaplansky's group-ring conjectures hold for torsion-free word-hyperbolic groups? We show that all four fail in positive characteristic. For every prime <i>p</i> there is a finitely presented, torsion-free, word-hyperbolic group <i>G</i> with a finite two-dimensional classifying space and <i>a</i>, <i>b</i> ∈ 𝔽<sub><i>p</i></sub>[<i>G</i>] with <i>ab</i> = 1 ≠ <i>ba</i>. So, over every field of characteristic <i>p</i>, the group algebra of <i>G</i> is not directly finite and has a non-trivial idempotent, zero divisor and unit, and <i>G</i> is neither sofic nor surjunctive. For <i>p</i> = 2, <i>G</i>, <i>a</i> and <i>b</i> come from OpenAI's random construction, and we add that <i>G</i> is hyperbolic with probability 1 − <i>o</i>(1), as are OpenAI's zero-divisor groups. For odd <i>p</i> the groups are new: they adapt OpenAI's direct-finiteness construction with a signed cancellation, found first by S. V. Ivanov and independently by us, via an exact solution of a colour-balance problem and a Perron certificate. As far as we know, they are the first torsion-free counterexamples to direct finiteness and to the idempotent conjecture in odd characteristic. Hyperbolicity comes from one deterministic criterion: if a labelled graph is pattern-free, the group obtained by coning off its components is aspherical and has a linear isoperimetric inequality. We prove it by running OpenAI's exclusion of reduced spheres on van Kampen discs, an accounting OpenAI used for another complex. For every prime <i>p</i>, the existence of <i>G</i>, <i>a</i> and <i>b</i> and the failure of all four conjectures are formalized in Lean 4, including existence forms of the random-graph estimates used. In characteristic zero, where the idempotent and direct-finiteness conjectures hold for torsion-free hyperbolic groups, we show that no cancellation built into the vertex types survives the decay estimate that makes the groups torsion-free. OpenAI's characteristic-two counterexample with torsion is a CAT(0) group.</p>",
   "keywords": [
     "group rings",
     "Kaplansky's conjectures",
@@ -27,7 +28,7 @@
   "access_right": "open",
   "license": "cc-by-4.0",
   "language": "eng",
-  "notes": "The paper and documentation are licensed CC BY 4.0 and the scripts MIT or Apache 2.0, at the user's option (see RIGHTS.md and NOTICE). The cone-on-graphs construction, the groups and elements of OpenAI's preprints, and every estimate imported from them are OpenAI's; the signed cancellation and the two-colour model were found first by S. V. Ivanov (arXiv:2610.17662) and independently by the authors. Section 11 of the paper gives a sentence-level account of credit. This is a preprint, not a claim of journal peer review.",
+  "notes": "The paper and documentation are licensed CC BY 4.0 and the scripts MIT or Apache 2.0, at the user's option; the Lean development in lean/KaplanskyLean is licensed Apache 2.0, and the OpenAI modules vendored in it are redistributed under OpenAI's Apache License 2.0 (see RIGHTS.md and NOTICE). The cone-on-graphs construction, the groups and elements of OpenAI's preprints, and every estimate imported from them are OpenAI's; the signed cancellation and the two-colour model were found first by S. V. Ivanov (arXiv:2610.17662) and independently by the authors. The Lean 4 formalization of the Main Theorem is Nidhal Mghirbi's; it builds on OpenAI's Lean development, and its source is included in this release. Section 11 of the paper gives a sentence-level account of credit. This is a preprint, not a claim of journal peer review.",
   "related_identifiers": [
     {
       "identifier": "https://github.com/openai/math/blob/main/preprints/A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026/paper.pdf",
@@ -54,6 +55,18 @@
       "identifier": "10.5281/zenodo.23202474",
       "relation": "references",
       "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "arXiv:2610.22536",
+      "relation": "references",
+      "scheme": "arxiv",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "arXiv:2610.24836",
+      "relation": "references",
+      "scheme": "arxiv",
       "resource_type": "publication-preprint"
     }
   ]
