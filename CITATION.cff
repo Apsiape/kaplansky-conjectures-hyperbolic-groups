@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Please cite the paper; this repository supplies its LaTeX source, the scripts of its verification package and the Lean formalization of its Main Theorem."
 type: software
 title: "Kaplansky's conjectures fail for torsion-free hyperbolic groups in positive characteristic"
-version: 1.0.2
-date-released: "2026-10-26"
+version: 1.0.3
+date-released: "2026-11-01"
 doi: 10.5281/zenodo.23374263
 identifiers:
   - type: doi
@@ -85,6 +85,14 @@ references:
     notes: "arXiv:2610.22536, 15 October 2026. Independent construction, for every odd prime, of finitely presented groups whose group algebras over F_p are not directly finite; torsion-freeness and hyperbolicity are not claimed."
   - type: generic
     authors:
+      - family-names: Miah
+        given-names: Y. T.
+    title: "Hadamard designs and incidence repair for Kaplansky's direct-finiteness problem"
+    year: 2026
+    doi: 10.5281/zenodo.23485436
+    notes: "Zenodo preprint, 19 October 2026. Builds on version 1.0.0 of this paper: explicit finite incidence data for one-sided inverses in odd characteristic."
+  - type: generic
+    authors:
       - family-names: Douglas
         given-names: Seth
       - family-names: Mghirbi
@@ -102,7 +110,7 @@ preferred-citation:
     - family-names: Douglas
       given-names: Seth
   year: 2026
-  version: 1.0.2
+  version: 1.0.3
   doi: 10.5281/zenodo.23374263
   url: "https://doi.org/10.5281/zenodo.23374263"
   notes: "Preprint. The paper is licensed CC BY 4.0 and the scripts MIT or Apache 2.0; see RIGHTS.md."

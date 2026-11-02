@@ -22,9 +22,10 @@ states the theorems, and the rest of the development proves them.
   It does not state the corollary for all large sizes, the unit, or the area constant.
 
 `Audit.lean` checks that each proof has exactly the type of its statement in the challenge file, and prints the axioms.
-The build record of 25 October 2026 reports `lake build Kaplansky.Final.Main` succeeding. It also reports
-`#print axioms` = `[propext, Classical.choice, Quot.sound]` for both main proofs, and for the auxiliary results checked
-there.
+N. Mghirbi's build of 25 October 2026 (its record is not included here) reports `lake build Kaplansky.Final.Main`
+succeeding, and `#print axioms` = `[propext, Classical.choice, Quot.sound]` for both main proofs and for the auxiliary
+results checked there. The published files differ from that build only by comments: a version line in the header of
+`Kaplansky/Challenge.lean`, and the provenance notices in three files under `OAI/`. An independent rebuild of the published files at tag v1.0.2 on 1 November 2026 reproduced this, including a kernel replay of the exported proof dependencies with leanchecker and with the external checker nanoda.
 
 The remaining point of trust is that the definitions in `Kaplansky/Challenge.lean` mean what the paper means.
 
@@ -38,6 +39,12 @@ lake exe cache get
 lake build
 lake env lean Audit.lean
 ```
+
+`lake exe cache get` downloads Mathlib's prebuilt `.olean` files for commit `d13f23b` (network access needed; without
+it Mathlib is compiled from source). `lake build` reports "declaration uses 'sorry'" for exactly the three statements in
+`Kaplansky/Challenge.lean`, by design; `#print axioms` on the proofs shows that they do not use them. For a kernel
+replay, run `lake env leanchecker Kaplansky.Final.Main` (add `--fresh` to replay every imported constant); for an
+external kernel, export with `lean4export` and check with nanoda.
 
 ## Contents and licences
 

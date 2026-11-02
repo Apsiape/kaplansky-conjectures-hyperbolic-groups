@@ -4,7 +4,10 @@ Nidhal Mghirbi and Seth Douglas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23374263.svg)](https://doi.org/10.5281/zenodo.23374263)
 
-Version 1.0.2 (26 October 2026; [doi:10.5281/zenodo.23673698](https://doi.org/10.5281/zenodo.23673698)) reports Nidhal Mghirbi's Lean 4 formalization of the Main Theorem, whose source
+Version 1.0.3 (1 November 2026) records an independent rebuild and kernel replay of the Lean formalization, attaches the
+PDF to the Zenodo record, moves the licence texts to `LICENSES/`, cites Miah's follow-up preprint and makes two
+wording changes in the paper (the scope of Kaplansky's Problem 6, and the universe of the fields in the Lean statement);
+no mathematical statement changes. Version 1.0.2 (26 October 2026; [doi:10.5281/zenodo.23673698](https://doi.org/10.5281/zenodo.23673698)) reports Nidhal Mghirbi's Lean 4 formalization of the Main Theorem, whose source
 is included in this repository, corrects a sentence of the introduction (Agol's theorem gives the zero-divisor
 conjecture for cubulated *hyperbolic* groups, not for all cubulated groups), cites work posted since version 1.0.0
 and updates the references; no mathematical statement changes. Version 1.0.1 ([doi:10.5281/zenodo.23374592](https://doi.org/10.5281/zenodo.23374592))
@@ -72,15 +75,17 @@ OpenAI's public Comparator challenges. In
 [`Kaplansky/Final/Main.lean`](lean/KaplanskyLean/Kaplansky/Final/Main.lean), `Kaplansky.Final.mainTheorem_proof`
 proves, for every prime p, the existence of G, a and b, and `Kaplansky.Final.mainTheoremConsequences_proof` proves
 the failure of all four conjectures over every field of characteristic p; [`Audit.lean`](lean/KaplanskyLean/Audit.lean)
-checks their types and prints their axioms. The build record (25 October 2026) reports
-`lake build Kaplansky.Final.Main` succeeding and `#print axioms` = [propext, Classical.choice, Quot.sound] for both.
+checks their types and prints their axioms. N. Mghirbi's build of 25 October 2026 (its record is not included here)
+reports `lake build Kaplansky.Final.Main` succeeding and `#print axioms` = [propext, Classical.choice, Quot.sound] for
+both; the published files differ from that build only by comments. An independent rebuild of the published files at tag v1.0.2 on 1 November 2026 reproduced this, including a kernel replay of the exported proof dependencies with leanchecker and with the external checker nanoda.
 The development includes OpenAI's Lean modules for their zero-divisor result and parts of two other OpenAI
 developments (the non-residually-finite hyperbolic group, and odd-characteristic direct finiteness). They retain the
 upstream source except for the import adaptations and the excerpt of `CayleyMetric.lean` as `GraphMetric.lean`, each
 modified file carrying a notice, as documented in `lean/KaplanskyLean/OAI/VENDOR.md`; they are redistributed under
 OpenAI's Apache License 2.0. Corollary 5.4 is formalized as a single example (one
 outcome at one size), without the unit and the area constant. Not formalized: the probability statement of
-Theorem A, non-soficity and non-surjunctivity, the explicit area constants, Section 6 apart from Lemma 6.1,
+Theorem A, non-soficity and non-surjunctivity, Connell's theorem (used for the units of Corollaries 5.3 and 5.4 and
+Proposition 6.9), the explicit area constants, Section 6 apart from Lemma 6.1,
 Corollary 7.13, Section 8 and Theorem D. Appendix C of the paper and `DEPENDENCIES.md` list what is formalized.
 The remaining point of trust is that the definitions in the statement file mean what the paper means. Nidhal
 Mghirbi's files are under the Apache License 2.0, and the vendored OpenAI modules under OpenAI's Apache License 2.0.
