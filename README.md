@@ -4,7 +4,7 @@ Nidhal Mghirbi and Seth Douglas
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23374263.svg)](https://doi.org/10.5281/zenodo.23374263)
 
-Version 1.0.3 (1 November 2026) records an independent rebuild and kernel replay of the Lean formalization, attaches the
+Version 1.0.3 (1 November 2026; [doi:10.5281/zenodo.23873781](https://doi.org/10.5281/zenodo.23873781)) records an independent rebuild and kernel replay of the Lean formalization, attaches the
 PDF to the Zenodo record, moves the licence texts to `LICENSES/`, cites Miah's follow-up preprint and makes two
 wording changes in the paper (the scope of Kaplansky's Problem 6, and the universe of the fields in the Lean statement);
 no mathematical statement changes. Version 1.0.2 (26 October 2026; [doi:10.5281/zenodo.23673698](https://doi.org/10.5281/zenodo.23673698)) reports Nidhal Mghirbi's Lean 4 formalization of the Main Theorem, whose source

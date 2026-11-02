@@ -7,6 +7,9 @@ date-released: "2026-11-01"
 doi: 10.5281/zenodo.23374263
 identifiers:
   - type: doi
+    value: 10.5281/zenodo.23873781
+    description: "Version 1.0.3"
+  - type: doi
     value: 10.5281/zenodo.23673698
     description: "Version 1.0.2"
   - type: doi
