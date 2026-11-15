@@ -46,6 +46,31 @@ it Mathlib is compiled from source). `lake build` reports "declaration uses 'sor
 replay, run `lake env leanchecker Kaplansky.Final.Main` (add `--fresh` to replay every imported constant); for an
 external kernel, export with `lean4export` and check with nanoda.
 
+## Admissions in the default build
+
+The default `Kaplansky` library includes the comparator statements in
+`Kaplansky/Challenge.lean`. Consequently, `lake build` emits three admission
+warnings:
+
+| File | Admitted declaration |
+|---|---|
+| `Kaplansky/Challenge.lean` | `Kaplansky.hyperbolicZeroDivisors` |
+| `Kaplansky/Challenge.lean` | `Kaplansky.mainTheorem` |
+| `Kaplansky/Challenge.lean` | `Kaplansky.mainTheoremConsequences` |
+
+The audited headline proofs (`Kaplansky.Final.mainTheorem_proof`,
+`Kaplansky.Final.mainTheoremConsequences_proof`, and
+`Kaplansky.Main.hyperbolicZeroDivisors_proof`) do not use these admitted proof
+terms. After the build, run this exact axiom audit from this directory:
+
+```sh
+lake env lean -j1 -M8192 Audit.lean
+```
+
+Their printed axiom dependencies contain only `propext`, `Classical.choice`
+and `Quot.sound`, with no `sorryAx`. The source modules import the shared
+statement definitions; the admitted comparator proofs are unused.
+
 ## Contents and licences
 
 - `Kaplansky/` and `Audit.lean`: Nidhal Mghirbi's development. Copyright 2026 Nidhal Mghirbi. Licensed under the
