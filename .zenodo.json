@@ -31,6 +31,12 @@
   "notes": "The paper and documentation are licensed CC BY 4.0 and the scripts MIT or Apache 2.0, at the user's option; the Lean development in lean/KaplanskyLean is licensed Apache 2.0, and the OpenAI modules vendored in it are redistributed under OpenAI's Apache License 2.0 (see RIGHTS.md and NOTICE). The cone-on-graphs construction, the groups and elements of OpenAI's preprints, and every estimate imported from them are OpenAI's; the signed cancellation and the two-colour model were found first by S. V. Ivanov (arXiv:2610.17662) and independently by the authors. The Lean 4 formalization of the Main Theorem is Nidhal Mghirbi's; it builds on OpenAI's Lean development, and its source is included in this release. Section 11 of the paper gives a sentence-level account of credit. This is a preprint, not a claim of journal peer review.",
   "related_identifiers": [
     {
+      "identifier": "arXiv:2611.04599",
+      "relation": "isVariantFormOf",
+      "scheme": "arxiv",
+      "resource_type": "publication-preprint"
+    },
+    {
       "identifier": "https://github.com/openai/math/blob/main/preprints/A-Torsion-Free-Group-Algebra-with-Zero-Divisors-September-23-2026/paper.pdf",
       "relation": "references",
       "resource_type": "publication-preprint"

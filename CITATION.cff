@@ -21,6 +21,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.23374263
     description: "All versions (concept DOI)"
+  - type: url
+    value: "https://arxiv.org/abs/2611.04599"
+    description: "arXiv preprint arXiv:2611.04599"
 license:
   - CC-BY-4.0
   - MIT
